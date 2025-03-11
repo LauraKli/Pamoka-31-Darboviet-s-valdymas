@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pridėti darbovietę</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Pridėti darbovietę</h1>
+    <form method="POST">
+        <label for="pavadinimas">Pavadinimas:</label>
+        <input type="text" id="pavadinimas" name="pavadinimas" required><br>
+
+        <label for="miestas">Miestas:</label>
+        <input type="text" id="miestas" name="miestas" required><br>
+
+        <label for="darbuotoju_skaicius">Darbuotojų skaičius:</label>
+        <input type="number" id="darbuotoju_skaicius" name="darbuotoju_skaicius" required><br>
+
+        <button type="submit">Pridėti</button>
+    </form>
+</body>
+</html>

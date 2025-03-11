@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pridėti darbuotoją</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Pridėti darbuotoją</h1>
+    <form method="POST">
+        <label for="vardas">Vardas:</label>
+        <input type="text" id="vardas" name="vardas" required><br>
+
+        <label for="pavarde">Pavardė:</label>
+        <input type="text" id="pavarde" name="pavarde" required><br>
+
+        <label for="pareigos">Pareigos:</label>
+        <input type="text" id="pareigos" name="pareigos" required><br>
+
+        <label for="darboviete_id">Darbovietė:</label>
+        <select id="darboviete_id" name="darboviete_id" required>
+            {% for darboviete in darbovietes %}
+            <option value="{{ darboviete.id }}">{{ darboviete.pavadinimas }}</option>
+            {% endfor %}
+        </select><br>
+
+        <button type="submit">Pridėti darbuotoją</button>
+    </form>
+</body>
+</html>

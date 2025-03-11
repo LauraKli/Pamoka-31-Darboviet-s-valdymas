@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darbovietės</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Darbovietės</h1>
+    <a href="{{ url_for('prideti_darboviete') }}">Pridėti darbovietę</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Pavadinimas</th>
+                <th>Miestas</th>
+                <th>Darbuotojų skaičius</th>
+                <th>Veiksmai</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for darboviete in darbovietes %}
+            <tr>
+                <td>{{ darboviete.pavadinimas }}</td>
+                <td>{{ darboviete.miestas }}</td>
+                <td>{{ darboviete.darbuotoju_skaicius }}</td>
+                <td>
+                    <a href="{{ url_for('redaguoti_darboviete', id=darboviete.id) }}">Redaguoti</a>
+                    <a href="{{ url_for('trinti_darboviete', id=darboviete.id) }}">Ištrinti</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
