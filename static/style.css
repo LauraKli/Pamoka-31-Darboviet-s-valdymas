@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: lightgray;
 }
 
 h1 {
@@ -11,7 +11,7 @@ h1 {
 }
 
 a {
-    color: #2196F3;
+    color: dodgerblue;
     text-decoration: none;
 }
 
@@ -24,11 +24,11 @@ table {
 th, td {
     padding: 10px;
     text-align: left;
-    border: 1px solid #ddd;
+    border: 1px solid lightgray;
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: whitesmoke;
 }
 
 button {
@@ -38,19 +38,19 @@ button {
 }
 
 button[type="submit"] {
-    background-color: #4CAF50;
+    background-color: green;
     color: white;
     border-radius: 5px;
     margin-top: 10px;
 }
 
 button[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: darkgreen;
 }
 
 a {
     padding: 5px 10px;
-    background-color: #2196F3;
+    background-color: dodgerblue;
     color: white;
     border-radius: 5px;
     text-align: center;
@@ -58,17 +58,17 @@ a {
 }
 
 a:hover {
-    background-color: #0b7dda;
+    background-color: mediumblue;
 }
 
 .btn-delete {
     padding: 5px 10px;
-    background-color: #f44336;
+    background-color: red;
     color: white;
     border-radius: 5px;
     border: none;
 }
 
 .btn-delete:hover {
-    background-color: #da190b;
+    background-color: darkred;
 }
